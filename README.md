@@ -1,18 +1,29 @@
-## Getting Started
+# Reprise et amélioration d'un projet BUT Informatique
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Application de film
 
-## Folder Structure
+### Description
 
-The workspace contains two folders by default, where:
+Ce projet est une **reprise d'un ancien travail réalisé lors de ma première année de BUT Informatique.**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+L'objectif principal est de **consolider mes acquis**, tout en **améliorant la qualité du code** et en y ajoutant de nouvelles fonctionnalités.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Objectifs
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Refactorisation du code :**
+    - Simplification des méthodes trop complexes
+    - Amélioration de la lisibilité et de la maintenabilité
+    - Application de bonnes pratiques de développement
+- **Ajout d'une interface graphique moderne avec JavaFX :**
+    - Création d'une interface ergonomique et intuitive
+    - Meilleure expérience utilisateur comparée à la version initiale en console
+- **Consolidation de l'existant :**
+    - Corrections de bugs éventuels
+    - Optimisation des performances
+    - Structuration du projet pour faciliter son évolution
 
-## Dependency Management
+### Technologies utilisées
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+**Java**
+
+**JavaFX** (interface graphique)
