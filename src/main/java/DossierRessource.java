@@ -8,20 +8,45 @@ import java.nio.file.Paths;
 import java.util.Objects;
 
 public class DossierRessource {
-    public static void lireContenu() throws URISyntaxException {
-        URL url = DossierRessource.class.getClassLoader().getResource("");
+    private static final URL DOSSIER = DossierRessource.class.getClassLoader().getResource("");
 
-        if (url == null) {
-            System.out.println("Dossier introuvable.");
+    public static void lireContenu() throws URISyntaxException {
+        if (!dossierExiste()) {
             return;
         }
 
-        if (url.getProtocol().equals("file")) {
-            Path path = Paths.get(url.toURI());
+        if (DOSSIER.getProtocol().equals("file")) {
+            System.out.println("Fichier contenu dans le dossier de ressources :");
+            Path path = Paths.get(DOSSIER.toURI());
 
             for (File f : Objects.requireNonNull(path.toFile().listFiles())) {
                 if (!f.isDirectory()) System.out.println(f.getName());
             }
         }
+    }
+
+    public static boolean estVide() throws URISyntaxException {
+        if (dossierExiste()) {
+            Path path = Paths.get(DOSSIER.toURI());
+
+            if (path.toFile().list().length > 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     *  Permet de savoir si le chemin existe ou non.
+     * @return true si le dossier existe. Sinon retourne false.
+     */
+    public static boolean dossierExiste() {
+        if (DOSSIER == null) {
+            System.out.println("Dossier introuvable.");
+            return false;
+        }
+
+        return true;
     }
 }
